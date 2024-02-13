@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+--licht-geel:#FFEBBA;
+--oranje: #FFAB7A;
+--licht-blauw: #5986A0;
+--donker-blauw: #002D47; 
+}
+
+body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main{
+  display: flex;
+}
+
+/* section 1 */
+.filter-system{
+  background: var(--licht-geel);
+  font-family: "Poppins", sans-serif;
+  color: var(--donker-blauw);
+  height: 100%;
+  width: 18em;
+}
+/* grote header filter */
+.filter-system div:nth-child(1){
+ display: flex;
+ justify-content: center;
+ padding: 3em;
+}
+/* filter per squad */
+nav{
+  display: flex;
+  justify-content: center;
+
+  & li{
+    padding: 1.2em;
+    list-style: none;
+  }
+
+  & a{
+    background: var(--oranje);
+    padding: 0.1em 2.8em 0.2em 2.8em;
+    text-decoration: none;
+    border-radius: 2em;
+    font-weight: bold;
+    color: var(--donker-blauw);
+  }
+}
+/* container voor filter */
+.filter-container{
+  background: #f6e382;
+  margin: 3em auto;
+  padding: 0.5em;
+  width: 15em;
+  border-radius: 0.5em;
+  box-shadow: 0px 3px 3px goldenrod;
+}
+
+div p{
+  color: var(--donker-blauw);
+  font-weight: 600;
+}
+
+.checkbox{
+  padding: 0.2em;
+  margin-left: 0.3em;
+}
+/* start cards */
+/* section 2 */
+
+.card-content{
+  background: var(--licht-blauw);
+  width: 100%;
+}
+
+.card-container{
+  padding: 2em;
+}
+
+.card{
+  width: 16em;
+  height: 16em;
+  background: var(--donker-blauw);
+  color: white;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 0.3em;
+  
+  & h2{
+   color: white;
+   padding: 0.5em;
+  }
+
+  & img{
+    width: 5em;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.4em;
+  }
+}
+

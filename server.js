@@ -8,7 +8,7 @@ import fetchJson from './helpers/fetch-json.js'
 const apiUrl = 'https://fdnd.directus.app/items'
 
 // Haal alle squads uit de WHOIS API op
-const squadData = await fetchJson(apiUrl + '/squad')
+const  squadData = await fetchJson(apiUrl + '/squad')
 
 // Maak een nieuwe express app aan
 const app = express()

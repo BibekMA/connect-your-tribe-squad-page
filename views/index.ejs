@@ -1,10 +1,63 @@
 <%- include('./partials/head') %>
 
-<h2>Students</h2>
-<ul>
-  <% persons.forEach(person => { %>
-    <li><a href="./person/<%= person.id %>"><%= person.name %></a>, squad_id <%= person.squad_id %></li>
-  <% }) %>
-</ul>
+<main>
+  <section class="filter-system">
+  <div>
+    <h1>Filter menu</h1>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="">Squad A</a>
+      </li>
+      <li>
+        <a href="">Squad B</a>
+      </li>
+      <li>
+        <a href="">Squad C</a>
+      </li>
+      <li>
+        <a href="">Squad D</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="filter-container">
+    <p>Sorteer A/Z 
+      <input class="checkbox" type="checkbox">
+    </p>
+    <p>Sorteer Z/A 
+      <input class="checkbox" type="checkbox">
+    </p>
+    <p>Sorteer Leeftijd J/O
+      <input class="radiobox" type="checkbox">
+    </p>
+    <p>Sorteer Leeftijd O/J
+      <input class="radiobox" type="checkbox">
+    </p>
+  </div>
+</section>
+<section class="card-content">
+<em>geselecteerde filters:</em>
+
+<% persons.forEach(person => { %>
+  <div class="card-container">
+    <section class="card">
+      <h2><%= person.name %></h2>
+      <h3> <img src="<%= person.avatar %>" alt=""></h3> 
+      <h4> Over mij </h4>
+      <p><%= person.bio %></p>
+     </section>
+    <% }) %>
+  </div>
+
+</main>
 
 <%- include('./partials/foot') %>
+
+<!-- <% persons.forEach(person => { %>
+  <a href="./person/<%= person.id %>"><%= person.name %></a>, squad_id <%= person.squad_id %>
+  <p><%= person.surname %></p>
+  <p><%= person.bio %></p>
+<% }) %> -->
+
+
